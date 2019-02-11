@@ -20,6 +20,7 @@ app.route('/api/hospitals/v1/hospitals/:id')
                 res.json(results);
             }
         );
+        connection.end();
     })
     .delete(function (req,res) {
         connection.query(
@@ -29,6 +30,7 @@ app.route('/api/hospitals/v1/hospitals/:id')
                 res.send({message: "Registro eliminado exitosamente"});
             }
         );
+        connection.end();
     })
     ;
 //[End][Get, Delete] hospital by Id
@@ -43,6 +45,7 @@ app.route('/api/hospitals/v1/region/:region')
                 res.json(results);
             }
         );
+        connection.end();
     });
 //[End][Get] hospital by region
 
@@ -56,6 +59,7 @@ app.route('/api/hospitals/v1/hospitals')
                 res.json(results);
             }
         );
+        connection.end();
     })
     .post(function(req, res, next) {
         console.log('REQ: ',req.body);
@@ -70,6 +74,7 @@ app.route('/api/hospitals/v1/hospitals')
                 res.send({message: "El Hospital se agregó exitosamente"});
             }
         );
+        connection.end();
     });
 //[End][Get] all Hospital, Create Hospital
 
