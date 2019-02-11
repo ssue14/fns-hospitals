@@ -24,7 +24,7 @@
   },
   "author": "sriosmar",
   "engines": {
-    "node": ">=8"
+    "node": "8"
   },
   "license": "ISC",
   "dependencies": {
