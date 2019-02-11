@@ -22,7 +22,7 @@ let connection = mysql.createConnection(config);
     database: process.env.DB_DATABASE,
     password: process.env.DB_PASS
 });
-
+*/
 connection.connect(function(err) {
     if (err) {
         console.error('Error connecting: ' + err.stack);
@@ -31,4 +31,4 @@ connection.connect(function(err) {
     console.log('Connected as thread id: ' + connection.threadId);
 });
 
-module.exports = connection;*/
+module.exports = connection;
