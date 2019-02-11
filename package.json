@@ -1,0 +1,44 @@
+{
+  "name": "fns-hospitals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "private": true,
+  "cloud-repo-tools": {
+    "requiresKeyFile": true,
+    "requiresProjectId": true,
+    "test": {
+      "app": {
+        "args": [
+          "app.js"
+        ],
+        "msg": "Hello, world!"
+      }
+    }
+  },
+  "scripts": {
+    "start": "node app.js",
+    "e2e": "repo-tools test deploy",
+    "test": "repo-tools test app",
+    "cover": "nyc --cache npm test; nyc report --reporter=html"
+  },
+  "author": "sriosmar",
+  "engines": {
+    "node": ">=8"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "compression": "1.7.3",
+    "cors": "2.8.5",
+    "dotenv": "6.2.0",
+    "express": "4.16.4",
+    "mysql": "2.16.0"
+  },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "3.0.0",
+    "ava": "0.25.0",
+    "nodemon": "1.18.10",
+    "supertest": "3.3.0"
+  }
+}
